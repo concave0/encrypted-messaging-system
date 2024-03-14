@@ -1,5 +1,4 @@
 import requests as r 
-import json
 import time 
 
 token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZXN0aW5nIjoiQWNjb3VudCBjcmVhdGVkIG9uOiAyMDI0LTAzLTEzIDAzOjA2OjI5LjE1MTYyNSJ9.eAya9ONuYTHBLySZvGZF2-mAYJN35MTBx2MgppEQkeGccrdGLqkyVhr0g8BpiOLCw3MzXSF5MAFVp-p6onjBnUySl6_KjgNSfsp4FNVHYTSDtHYsD7iSq53nNXzlHBEMuUtK5IHUs4_4dyS3EQfSqVixEOQVHCt7W27SjAMZ959RRN_820TKtZ6nUZrvAVUADqN3pgXTzkqMQk1gScCQHB7-UncnzPSHF0EjX3CP-Ids7lZLKy7qspkEWAXUtIO_otPlNfhKp4Te5YtaHyg_tbxLCvpSvHDXKT2Rpb6tdR_To2ZUhx_RpvTNh76PbvVzH5gBRr88g1FiGXuNN8qs3aiJFzfo3e6qAl4TTmUX2h0gxTKJzqVvsRVWnuyEqqFf1YlocIAAiTaqryY4FFNQdUYstzhmbxEFuPf6vko01mc9PtsJXW2lnFxZQwQCxWSjZtev9Wh5pOlwirun2ea_8SxPLPivj6SNRAV3Wlqj9u-ygJORSOm0oo_C3r8lg8Jtuda1XmH9dvDjyhHXVaXq7eIcx7v0rQWt0R_S1C-Z-aMVZTwgLU3AUne--EviqK1SlwKpEEFgX99DhAX3NkPV2abxG9R6EzFFhI44__A1S05gXMXHXMOP1zV833L93xaIoUj4ptheFWDwyMz7PMPg-ctzLs5FJi41VMDdn7i8HEg"
@@ -66,21 +65,29 @@ def test_add_users_batch_check_update(header:dict,url:str):
     response = r.get(url, headers = header)
     return response.text
     
+""" Local Network """
 url_authorized =  "http://127.0.0.1:8000/authorize"
 url_message = "http://127.0.0.1:8000/rerouting-message-to-designation"
 url_fetch_mail = "http://127.0.0.1:8000/fetch-mailbox/testing_message_server"
-sync_mail = "http://192.168.68.55:5000/sync-mail"
-add_users_for_cache_url = "http://192.168.68.55:5000/users-to-cache"
+add_users_for_cache_url_local = "http://127.0.0.1:5000/users-to-cache"
+sync_mail_local = "http://127.0.0.1:5000/sync-mail"
+
+""" Network Wide """
+sync_mail = "http://192.168.68.58:5000/sync-mail"
+add_users_for_cache_url = "http://192.168.68.58:5000/users-to-cache"
+
 
 """ Testing messaging services"""
 # print(test_messaging(headers_messaging, url_message))
 # print(test_fetch_mail(testing_message_server_token, url_fetch_mail))
 
 """ Setting up config for messaging systems cache"""
-print(test_add_users_batch_check_update(header=headers_testing_message_server, url=add_users_for_cache_url))
+print(test_add_users_batch_check_update(header=headers_testing_message_server, url = add_users_for_cache_url))
 time.sleep(2)
-print(test_add_users_batch_check_update(header=headers_test_test_user, url=add_users_for_cache_url))
+print(test_add_users_batch_check_update(header=headers_test_test_user, url = add_users_for_cache_url))
 time.sleep(2)
 
 """ Testing the sync mail function"""
 print(test_sync_mail(url = sync_mail))
+local = "http://127.0.0.1:5000/sync-mail"
+

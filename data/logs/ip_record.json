@@ -10623,5 +10623,80 @@
         "endpoint": "/authorizing",
         "status_code": "200",
         "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:25:59.684016": {
+        "endpoint": "/login",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:26:10.563009": {
+        "endpoint": "/add_user",
+        "status_code": "201",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:36.846798": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:38.827687": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:39.121938": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:40.825454": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:41.125131": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:42.826612": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:43.122914": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:44.824953": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:45.113728": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:46.822560": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:47.107923": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:48.825924": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
+    },
+    "time stamp 2024-03-13 17:37:49.108901": {
+        "endpoint": "/authorizing",
+        "status_code": "200",
+        "remote address": "127.0.0.1"
     }
 }

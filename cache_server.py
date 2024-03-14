@@ -67,3 +67,7 @@ def clear_cache_route():
 @limiter.limit("1/second", override_defaults=False)
 def sync_mail():
     return messages_cache
+
+@flask_app.get("/hello_world") 
+def hello_world(): 
+    return {"hello":"world"}
